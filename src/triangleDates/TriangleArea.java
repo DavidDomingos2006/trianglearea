@@ -13,6 +13,8 @@ public class TriangleArea {
 		x = new Triangle();
 		y = new Triangle();
 		
+		//o x e o y são objetos da classe Triangle. funcionam muito parecidos com ponteiros
+		//que apontam para um atributo ou metodo.
 		
 		Scanner tec = new Scanner(System.in);
 		
@@ -25,11 +27,11 @@ public class TriangleArea {
 		y.b = tec.nextDouble();
 		y.c = tec.nextDouble();
 		
-		p = (x.a+x.b+x.c)/2;
-		areaX = Math.sqrt(p*(p-x.a)*(p-x.b)*(p-x.c));
 		
-		p = (y.a+y.b+y.c)/2;
-		areaY = Math.sqrt(p*(p-y.a)*(p-y.b)*(p-y.c));
+		areaX = x.area();
+		
+		
+		areaY = y.area();
 		
 		System.out.printf("Area x: %.4f \n", areaX);
 		System.out.printf("Area y: %.4f \n", areaY);
